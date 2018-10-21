@@ -15,7 +15,7 @@ app.use(express.static(__dirname + "/public"))
 app.use(morgan("dev"))
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
-mongoose.connect("mongodb://localhost:27017/zeta")
+mongoose.connect("mongodb://teamdraftbox:123vishnu@ds137643.mlab.com:37643/management")
 //===============================routes=================================//
 app.use("/api",api)
 app.use(manage)
