@@ -15,8 +15,9 @@ app.use(express.static(__dirname + "/public"))
 app.use(morgan("dev"))
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
-mongoose.connect("mongodb://teamdraftbox:123vishnu@ds137643.mlab.com:37643/management")
-//===============================routes=================================//
+mongoose.connect(process.env.DATABASEURL)
+console.log(process.env.DATABASEURL)
+//===============================routes==========="======================//
 app.use("/api",api)
 app.use(manage)
 app.use("/",function(req,res){
