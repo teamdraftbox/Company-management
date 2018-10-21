@@ -1,0 +1,21 @@
+
+<input type="search" placeholder="Search" aria-label="Search" ng-model = "mail">
+<button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Founder</th>
+      <th scope="col">Company</th>
+      <th scope="col">Email</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr ng-repeat = "element in data | filter:mail">
+      <th scope="row">{{element.managerName}}</th>
+      <td>{{element.companyName}}</td>
+      <td>{{element.email}}</td>
+     <td><a class="btn btn-primary" href="/show/{{element._id}}">Details</a></td> 
+    </tr>
+  </tbody>
+</table>

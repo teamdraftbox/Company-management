@@ -1,0 +1,21 @@
+.fill.ng-enter {
+    transition: 0.5s linear all;
+    opacity: 0;
+}
+
+.fill.ng-enter.ng-enter-active{
+    opacity: 1;
+}
+
+.alertt{
+    color:red;
+}
+
+
+input.ng-touched.ng-invalid{
+  border-color: red;
+}
+button[disabled="disabled"]{
+ opacity: 0.4;
+ cursor:not-allowed !important;
+}
